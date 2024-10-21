@@ -1,85 +1,39 @@
 'use strict';
+// 1 uzduotis 
 
+const manoVardas = "Martynas Katkus";
+console.log(manoVardas.toUpperCase());
 
-console.log("Hello World!");
+// 2 uzduotis
 
-
-
-function checkDay(day){
-    switch(day){
-        case 1:
-            console.log("today is Monday.");
-            break;
-        case 2:
-            console.log("Today is Tuesday.");
-            break;
-        case 3:
-            console.log("Today is Wednesday.");
-            break;
-        case 4: 
-            console.log("Today is Thursday.");
-            break;
-        case 5: 
-            console.log("Today is Friday!");
-            break;
-        case 6:
-            console.log("Today is Saturday.");
-            break;
-        case 7:
-            console.log("Today is Sunday.");
-            break;
-        default: 
-            console.log("Error...");
-            break;
+function lyginisArNe(x){
+    if(x % 2 === 0){
+        console.log(`${x} yra lyginis.`);
+    } else {
+        console.log(`${x} yra nelyginis.`);
     }
 }
 
-checkDay(2);
-checkDay(8);
+lyginisArNe(10);
+lyginisArNe(11);
 
-function menesioPavadinimas(menesis){
-    switch(menesis){
-        case "Sausis":
-            console.log(1);
-            break;
-        case "Vasaris":
-            console.log(2);
-            break;
-        case "Kovas":
-            console.log(3);
-            break;
-        case "Balandis":
-            console.log(4);
-            break;
-        case "Geguze":
-            console.log(5);
-            break;
-        case "Birzelis":
-            console.log(6);
-            break;
-        case "Liepa":
-            console.log(7);
-            break;
-        case "Rugpjutis":
-            console.log(8);
-            break;
-        case "Rugsejis":
-            console.log(9);
-            break;
-        case "Spalis":
-            console.log(10);
-            break;
-        case "Lapkritis":
-            console.log(11);
-            break;
-        case "Gruodis":
-            console.log(12);
-            break;
-        default:
-            console.log("Ivedet ne menesio pavadinima")
-    }
-}
+// 3 uzduotis
 
+let skaicius1 = Number(prompt("prasau iveskite skaiciu"));
+let skaicius2 = Number(prompt("iveskite dar viena skaiciu"));
+let zenklas = prompt("iveskite aritmetini zenkla (+, -, *, /)");
 
-menesioPavadinimas("Sausis");
-menesioPavadinimas("hubertas")
+let atsakymas;
+
+if (zenklas === "+"){
+    atsakymas = skaicius1 + skaicius2;
+} else if (zenklas === "-"){
+    atsakymas = skaicius1 - skaicius2;
+} else if (zenklas === "*"){
+    atsakymas = skaicius1 * skaicius2; 
+} else if (zenklas === "/"){
+    atsakymas = skaicius1 / skaicius2;
+} else (
+    atsakymas = "Kazka netaip ivedet. prasau pameginkite is naujo."
+)
+window.alert(atsakymas);
